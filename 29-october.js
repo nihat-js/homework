@@ -10,11 +10,30 @@ function bir(num) {
 }
 
 
-function bir_(num) {
+function bir_() {
+   let min = Math.floor(num / 1000);
+   let yuz = (num % 1000 - num % 100) / 100;
+   let on = (num % 100 - num % 10) / 10;
+   let bir = num % 10;
+
+   let output = min + yuz + on + bir;
+   return output;
+}
+
+
+function bir__(num) {
    num = num.toString();
    let output = parseInt(num[0], 10) + parseInt(num[1], 10) + parseInt(num[2], 10) + parseInt(num[3], 10);
    return output;
 }
+
+
+
+
+
+
+
+
 
 function iki(num) {
    let output = "Butun reqemler bir birine beraber deyil";
@@ -122,5 +141,15 @@ function dort_(input) {
 }
 
 
+let result1 = bir(4932);
+let result1_ = bir_(5321);
+let result1__ = bir(3333);
 
-console.log(dort('July'));
+let result2 = iki(776);
+let result3 = uc('a');
+let result4 = dort('february');
+let result4_ = dort('december');
+
+
+
+// console.log( result4_ );
